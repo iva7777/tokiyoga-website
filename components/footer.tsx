@@ -9,17 +9,12 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo and Tagline */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                <div className="w-5 h-5 bg-primary-foreground rounded-full" />
-              </div>
-              <span className="text-2xl font-bold">Токийога</span>
-            </div>
-            <p className="text-primary-foreground/80 leading-relaxed">
-              Поток от енергия,<br />
-              пространство за тишина.
-            </p>
+          <div className="col-span-1 flex flex-col items-start">
+            <img
+              src="/images/logo-light.svg"
+              alt="Tokiyoga logo"
+              className="mb-4 h-48 w-auto"
+            />
           </div>
 
           {/* Сесии Column */}

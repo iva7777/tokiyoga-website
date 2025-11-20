@@ -8,7 +8,6 @@ const geist = Geist({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'Токийога - Поток от енергия, пространство за тишина',
   description: 'Намери спокойствие, баланс и общност в нашето йога студио',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
