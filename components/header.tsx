@@ -33,7 +33,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8 text-2xl">
             <Link href="/sessions" className={linkClasses("/sessions")}>
               Сесии
             </Link>

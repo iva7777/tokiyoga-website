@@ -78,7 +78,7 @@ export default function SessionsHero() {
   const router = useRouter()
 
   const getButtonClasses = (color: Session["color"], isHovered: boolean) => {
-    const baseClasses = "px-12 py-4 rounded-full text-lg font-medium transition-all duration-300 border-2"
+    const baseClasses = "px-12 py-4 rounded-full text-xl font-medium transition-all duration-300 border-2"
 
     switch (color) {
       case "purple":

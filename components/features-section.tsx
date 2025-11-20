@@ -42,8 +42,8 @@ export default function FeaturesSection() {
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
                   <Icon className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-bold text-accent mb-4">{feature.title}</h3>
-                <p className="text-secondary-foreground leading-relaxed">{feature.description}</p>
+                <h3 className="font-bold text-accent mb-4 text-3xl">{feature.title}</h3>
+                <p className="text-secondary-foreground leading-relaxed text-lg">{feature.description}</p>
               </div>
             )
           })}

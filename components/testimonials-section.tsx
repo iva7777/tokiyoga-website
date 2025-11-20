@@ -48,8 +48,6 @@ export default function TestimonialsSection() {
 
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-accent text-center mb-16">Мнения</h2>
-
-        {/* Responsive Layout */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 max-w-3xl mx-auto">
           {/* Previous Button */}
           <Button
@@ -74,7 +72,7 @@ export default function TestimonialsSection() {
                 ))}
               </div>
             </div>
-            <p className="text-card-foreground leading-relaxed text-base md:text-lg">{current.text}</p>
+            <p className="text-card-foreground leading-relaxed text-md md:text-lg">{current.text}</p>
           </div>
 
           {/* Next Button */}

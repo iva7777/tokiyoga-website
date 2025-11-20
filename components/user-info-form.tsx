@@ -47,7 +47,7 @@ export default function UserInfoForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Column - Form */}
           <div>
-            <h2 className="text-4xl font-bold text-accent mb-8 text-center md:text-left">
+            <h2 className="text-4xl font-bold text-accent mb-8 text-center">
               Попълни своите лични данни
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -59,7 +59,7 @@ export default function UserInfoForm() {
                   value={formData.firstName}
                   onChange={handleInputChange}
                   required
-                  className="w-full bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                  className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
                 />
                 <input
                   type="text"
@@ -68,7 +68,7 @@ export default function UserInfoForm() {
                   value={formData.lastName}
                   onChange={handleInputChange}
                   required
-                  className="w-full bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                  className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
                 />
               </div>
 
@@ -79,7 +79,7 @@ export default function UserInfoForm() {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
               />
 
               <input
@@ -89,7 +89,7 @@ export default function UserInfoForm() {
                 value={formData.phone}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
               />
 
               <input
@@ -98,7 +98,7 @@ export default function UserInfoForm() {
                 placeholder="Желан метод на плащане"
                 value={formData.paymentMethod}
                 onChange={handleInputChange}
-                className="w-full bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
               />
 
               <textarea
@@ -107,12 +107,12 @@ export default function UserInfoForm() {
                 value={formData.comments}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all resize-none"
+                className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all resize-none"
               />
 
               <button
                 type="submit"
-                className="w-full bg-transparent border-2 border-accent text-accent px-12 py-4 rounded-full text-lg font-medium hover:bg-accent hover:text-primary hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all duration-300 mt-6"
+                className="w-full text-3xl bg-transparent border-2 border-accent text-accent px-12 py-4 rounded-full font-medium hover:bg-accent hover:text-primary hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all duration-300 mt-6"
               >
                 Изпрати
               </button>
@@ -121,7 +121,7 @@ export default function UserInfoForm() {
 
           {/* Right Column - Social Login */}
               <div className="flex flex-col items-center justify-center">
-                <h3 className="text-3xl font-bold text-accent mb-8">Или влез с профил</h3>
+                <h3 className="text-3xl font-bold text-accent mb-8 text-center">Или влез с профил</h3>
                 <div className="flex gap-4">
                   <button
                     onClick={() => handleSocialLogin("google")}

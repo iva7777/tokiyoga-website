@@ -38,7 +38,7 @@ export default function BookingForm() {
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
   const [showDatePicker, setShowDatePicker] = useState(false)
   const [showTimePicker, setShowTimePicker] = useState(false)
-  const [currentMonth, setCurrentMonth] = useState(new Date(2025, 11)) // December 2025
+  const [currentMonth, setCurrentMonth] = useState(new Date(2025, 11))
 
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -169,7 +169,7 @@ export default function BookingForm() {
         <div className="space-y-6">
           {/* Date Input */}
           <div className="relative">
-            <label className="block text-cyan-400 text-sm mb-2">Дата</label>
+            <label className="block text-cyan-400 text-xl mb-2">Дата</label>
             <button
               onClick={() => setShowDatePicker(!showDatePicker)}
               className="w-full bg-primary/50 border-2 border-purple-400/30 rounded-2xl px-6 py-4 text-left text-primary-foreground/70 flex items-center justify-between hover:border-purple-400/50 transition-colors duration-200"
@@ -236,7 +236,7 @@ export default function BookingForm() {
                   </button>
                   <button
                     onClick={() => setShowDatePicker(false)}
-                    className="bg-gradient-to-r from-accent to-cyan-400 text-primary px-8 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-accent/30 transition-all duration-200"
+                    className="bg-linear-to-r from-accent to-cyan-400 text-primary px-8 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-accent/30 transition-all duration-200"
                   >
                     OK
                   </button>
@@ -248,7 +248,7 @@ export default function BookingForm() {
           {/* Time Input */}
           {!showDatePicker && (
             <div className="relative">
-              <label className="block text-cyan-400 text-sm mb-2">Час</label>
+              <label className="block text-cyan-400 text-xl mb-2">Час</label>
               <button
                 onClick={() => setShowTimePicker(!showTimePicker)}
                 className="w-full bg-primary/50 border-2 border-purple-400/30 rounded-2xl px-6 py-4 text-left text-primary-foreground/70 flex items-center justify-between hover:border-purple-400/50 transition-colors duration-200"
