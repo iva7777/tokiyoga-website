@@ -6,24 +6,20 @@ import './globals.css'
 const geist = Geist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Токийога - Поток от енергия, пространство за тишина',
+  title: 'Токийога',
   description: 'Намери спокойствие, баланс и общност в нашето йога студио',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/images/favicon.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/images/favicon.png',
         media: '(prefers-color-scheme: dark)',
       },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
     ],
-    apple: '/apple-icon.png',
+    apple: '/images/favicon.png',
   },
 }
 
