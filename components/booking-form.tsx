@@ -7,7 +7,6 @@ import { useRouter, useSearchParams } from "next/navigation"
 // Mock data for fully booked dates (would come from API in production)
 const fullyBookedDates = [9, 10, 11, 12, 13, 21, 24, 25]
 
-// Mock data for available time slots (would come from API based on selected date)
 const getAvailableTimeSlots = (date: Date) => {
   const allSlots = [
     "08:00",
@@ -24,7 +23,6 @@ const getAvailableTimeSlots = (date: Date) => {
     "20:00",
   ]
 
-  // Mock: some slots are booked (would be determined by API)
   const bookedSlots = date.getDate() % 2 === 0 ? ["09:00", "12:00", "16:00"] : ["10:00", "15:00", "19:00"]
 
   return allSlots.map((slot) => ({

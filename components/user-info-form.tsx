@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import Header from "./header"
 
@@ -40,86 +40,88 @@ export default function UserInfoForm() {
 
   return (
     <div className="min-h-screen bg-background">
-  <Header />
-  <section className="min-h-screen bg-primary py-20 px-6">
-    <div className="container mx-auto max-w-5xl">
-      <div className="bg-purple-900/20 backdrop-blur-sm border-2 border-purple-400/20 rounded-3xl p-8 md:p-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Left Column - Form */}
-          <div>
-            <h2 className="text-4xl font-bold text-accent mb-8 text-center">
-              Попълни своите лични данни
-            </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="Име"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Фамилия"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
-                />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+      </Suspense>
+      <section className="min-h-screen bg-primary py-20 px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-purple-900/20 backdrop-blur-sm border-2 border-purple-400/20 rounded-3xl p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Left Column - Form */}
+              <div>
+                <h2 className="text-4xl font-bold text-accent mb-8 text-center">
+                  Попълни своите лични данни
+                </h2>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="Име"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Фамилия"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                    />
+                  </div>
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Имейл"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                  />
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Телефонен номер"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                  />
+
+                  <input
+                    type="text"
+                    name="paymentMethod"
+                    placeholder="Желан метод на плащане"
+                    value={formData.paymentMethod}
+                    onChange={handleInputChange}
+                    className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
+                  />
+
+                  <textarea
+                    name="comments"
+                    placeholder="Допълнителни коментари"
+                    value={formData.comments}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all resize-none"
+                  />
+
+                  <button
+                    type="submit"
+                    className="w-full text-3xl bg-transparent border-2 border-accent text-accent px-12 py-4 rounded-full font-medium hover:bg-accent hover:text-primary hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all duration-300 mt-6"
+                  >
+                    Изпрати
+                  </button>
+                </form>
               </div>
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Имейл"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-                className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
-              />
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Телефонен номер"
-                value={formData.phone}
-                onChange={handleInputChange}
-                required
-                className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
-              />
-
-              <input
-                type="text"
-                name="paymentMethod"
-                placeholder="Желан метод на плащане"
-                value={formData.paymentMethod}
-                onChange={handleInputChange}
-                className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
-              />
-
-              <textarea
-                name="comments"
-                placeholder="Допълнителни коментари"
-                value={formData.comments}
-                onChange={handleInputChange}
-                rows={4}
-                className="w-full text-xl bg-purple-300/20 border-0 rounded-xl px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all resize-none"
-              />
-
-              <button
-                type="submit"
-                className="w-full text-3xl bg-transparent border-2 border-accent text-accent px-12 py-4 rounded-full font-medium hover:bg-accent hover:text-primary hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all duration-300 mt-6"
-              >
-                Изпрати
-              </button>
-            </form>
-          </div>
-
-          {/* Right Column - Social Login */}
+              {/* Right Column - Social Login */}
               <div className="flex flex-col items-center justify-center">
                 <h3 className="text-3xl font-bold text-accent mb-8 text-center">Или влез с профил</h3>
                 <div className="flex gap-4">
@@ -154,11 +156,11 @@ export default function UserInfoForm() {
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
-</div>
 
   )
 }

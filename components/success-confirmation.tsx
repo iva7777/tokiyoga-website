@@ -1,7 +1,7 @@
 'use client'
 
 import { useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import Header from "./header"
 
 export default function SuccessConfirmation() {
@@ -16,7 +16,9 @@ export default function SuccessConfirmation() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+      </Suspense>
       <section className="min-h-screen bg-primary py-16 px-4 flex items-center">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-purple-900/20 backdrop-blur-sm border-2 border-purple-400/20 rounded-3xl p-8 md:p-16 flex flex-col items-center text-center gap-12">
