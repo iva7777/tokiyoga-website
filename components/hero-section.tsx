@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function HeroSection() {
   return (
@@ -14,12 +15,15 @@ export default function HeroSection() {
             Поток от енергия,<br />
             пространство за тишина.
           </h1>
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full transition-all hover:scale-105 hover:shadow-lg"
-          >
-            Запиши час
-          </Button>
+          
+          <Link href='sessions'>
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-full transition-all hover:scale-105 hover:shadow-lg"
+            >
+              Запиши час
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

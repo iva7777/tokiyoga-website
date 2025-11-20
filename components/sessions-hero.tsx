@@ -52,9 +52,9 @@ function MoonPhase({ phase }: { phase: Session["moonPhase"] }) {
       case "new":
         return "radial-gradient(circle at 30% 30%, rgba(60, 70, 90, 0.3) 0%, rgba(30, 35, 50, 0.8) 100%)"
       case "firstQuarter":
-        return "linear-gradient(to right, rgba(240, 240, 245, 0.9) 0%, rgba(240, 240, 245, 0.9) 50%, rgba(60, 70, 90, 0.4) 50%, rgba(30, 35, 50, 0.7) 100%)"
-      case "full":
         return "linear-gradient(to right, rgba(60, 70, 90, 0.4) 0%, rgba(30, 35, 50, 0.7) 35%, rgba(240, 240, 245, 0.9) 35%, rgba(240, 240, 245, 0.9) 100%)"
+      case "full":
+        return "linear-gradient(to right, rgba(240, 240, 245, 0.9) 0%, rgba(240, 240, 245, 0.9) 50%, rgba(60, 70, 90, 0.4) 50%, rgba(30, 35, 50, 0.7) 100%)"
       case "fullMoon":
         return "radial-gradient(circle at 50% 50%, rgba(240, 240, 245, 0.95) 0%, rgba(220, 225, 235, 0.9) 100%)"
     }
