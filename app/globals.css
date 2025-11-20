@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Light mint background */
+  --background: oklch(0.96 0.02 166);
+  /* Dark navy text */
+  --foreground: oklch(0.2 0.05 285);
+  /* White cards */
+  --card: oklch(1 0 0);
+  /* Dark navy card text */
+  --card-foreground: oklch(0.2 0.05 285);
+  /* Deep purple */
+  --primary: oklch(0.25 0.12 285);
+  /* White */
+  --primary-foreground: oklch(1 0 0);
+  /* Vibrant magenta/pink */
+  --accent: oklch(0.65 0.25 330);
+  /* Dark navy */
+  --accent-foreground: oklch(0.2 0.05 285);
+  /* Light cyan for feature cards */
+  --secondary: oklch(0.89 0.04 180);
+  /* Dark navy */
+  --secondary-foreground: oklch(0.2 0.05 285);
+  /* Light purple for decorative elements */
+  --decorative: oklch(0.7 0.15 310);
+  /* Border color */
+  --border: oklch(0.85 0.02 166);
+  /* Input border */
+  --input: oklch(0.85 0.02 166);
+  --ring: oklch(0.65 0.25 330);
+  --radius: 1.5rem;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-decorative: var(--decorative);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
