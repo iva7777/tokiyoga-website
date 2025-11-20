@@ -99,9 +99,10 @@
   font-display: swap;
 }
 
+
 @theme inline {
   --font-sans: "Phenomena", sans-serif;
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-mono: "Phenomena", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -145,7 +146,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: "Phenomena" !important;
+    @apply bg-background text-foreground font-mono;
   }
 }

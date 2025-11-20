@@ -1,9 +1,6 @@
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
-
-const geist = Geist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Токийога',
@@ -30,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bg">
-      <body className={`${geist.className} antialiased`}>
+      <body className="antialiased" style={{ fontFamily: "var(--font-sans)" }}>
         {children}
         <Analytics />
       </body>
