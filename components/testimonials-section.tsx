@@ -39,27 +39,11 @@ export default function TestimonialsSection() {
     <section className="py-20 bg-primary relative overflow-hidden min-h-[600px] flex items-center">
       {/* Decorative Flowers */}
       <div className="absolute left-0 bottom-0 w-96 h-96 opacity-20">
-        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g transform="translate(200, 200)">
-            {[...Array(12)].map((_, i) => (
-              <g key={i} transform={`rotate(${i * 30})`}>
-                <ellipse cx="75" cy="0" rx="75" ry="20" fill="currentColor" className="text-decorative" />
-              </g>
-            ))}
-          </g>
-        </svg>
+        <img src="/images/flower-overlay.png" className='w-[400px] h-[400px]' alt="chrisanthemium overlay" />
       </div>
 
-      <div className="absolute right-20 top-20 w-64 h-64 opacity-20">
-        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g transform="translate(150, 150)">
-            {[...Array(10)].map((_, i) => (
-              <g key={i} transform={`rotate(${i * 36})`}>
-                <ellipse cx="60" cy="0" rx="60" ry="18" fill="currentColor" className="text-decorative" />
-              </g>
-            ))}
-          </g>
-        </svg>
+      <div className="absolute right-20 top-20 w-80 h-80 opacity-20">
+        <img src="/images/flower-overlay.png" alt="chrisanthemium overlay" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
