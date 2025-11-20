@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { Instagram, Youtube, Facebook } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -7,13 +9,13 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {/* Logo and Tagline */}
-          <div className="col-span-1 flex flex-col items-start">
+          <div className="flex flex-col items-start">
             <img
               src="/images/logo-light.svg"
               alt="Tokiyoga logo"
-              className="mb-4 h-48 w-auto"
+              className="mb-4 h-32 md:h-48 w-auto"
             />
           </div>
 
@@ -94,7 +96,7 @@ export default function Footer() {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-4 mb-12 flex-wrap">
           <Link 
             href="https://www.instagram.com/tokiyoga_/" 
             target="_blank"
@@ -120,9 +122,9 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-primary-foreground/60">
             <p>Токийога | Всички права запазени</p>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
               <div className="flex items-center gap-2">
                 <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />

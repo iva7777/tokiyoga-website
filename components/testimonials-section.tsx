@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
     <section className="py-20 bg-primary relative overflow-hidden min-h-[600px] flex items-center">
       {/* Decorative Flowers */}
       <div className="absolute left-0 bottom-0 w-96 h-96 opacity-20">
-        <img src="/images/flower-overlay.png" className='w-[400px] h-[400px]' alt="chrisanthemium overlay" />
+        <img src="/images/flower-overlay.png" className="w-[400px] h-[400px]" alt="chrisanthemium overlay" />
       </div>
 
       <div className="absolute right-20 top-20 w-80 h-80 opacity-20">
@@ -47,9 +47,10 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-5xl font-bold text-accent text-center mb-16">Мнения</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-accent text-center mb-16">Мнения</h2>
 
-        <div className="max-w-3xl mx-auto flex items-center gap-8">
+        {/* Responsive Layout */}
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 max-w-3xl mx-auto">
           {/* Previous Button */}
           <Button
             variant="ghost"
@@ -61,21 +62,19 @@ export default function TestimonialsSection() {
           </Button>
 
           {/* Testimonial Card */}
-          <div className="bg-card rounded-3xl p-10 flex-1 shadow-2xl">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold text-accent">{current.name}</h3>
+          <div className="bg-card rounded-3xl p-8 md:p-10 flex-1 shadow-2xl">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4 md:gap-0">
+              <h3 className="text-xl md:text-2xl font-bold text-accent">{current.name}</h3>
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className={`w-5 h-5 ${
-                      i < current.rating ? 'fill-accent text-accent' : 'text-gray-300'
-                    }`}
+                    className={`w-5 h-5 ${i < current.rating ? 'fill-accent text-accent' : 'text-gray-300'}`}
                   />
                 ))}
               </div>
             </div>
-            <p className="text-card-foreground leading-relaxed text-lg">{current.text}</p>
+            <p className="text-card-foreground leading-relaxed text-base md:text-lg">{current.text}</p>
           </div>
 
           {/* Next Button */}
