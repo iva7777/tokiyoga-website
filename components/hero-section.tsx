@@ -19,7 +19,7 @@ export default function HeroSection() {
           <Link href='sessions'>
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-primary-foreground font-semibold px-8 py-6 text-2xl rounded-full transition-all hover:scale-105 hover:shadow-lg"
+              className="bg-accent hover:bg-accent/90 text-primary-foreground font-semibold px-8 py-6 text-2xl rounded-full transition-all hover:scale-105 hover:shadow-lg hover:cursor-pointer"
             >
               Запиши час
             </Button>
