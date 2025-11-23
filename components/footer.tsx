@@ -24,22 +24,22 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-4 text-accent">Сесии</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/sessions/beginning" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/sessions/book?type=Новолуние" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
                   Новолуние
                 </Link>
               </li>
               <li>
-                <Link href="/sessions/first" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/sessions/book?type=Първа%20четвърт" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
                   Първа четвърт
                 </Link>
               </li>
               <li>
-                <Link href="/sessions/popular" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/sessions/book?type=Полулуние" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
                   Полулуние
                 </Link>
               </li>
               <li>
-                <Link href="/sessions/meditation" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/sessions/book?type=Пълнолуние" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
                   Пълнолуние
                 </Link>
               </li>
@@ -51,22 +51,22 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-4 text-accent">За нас</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about/services" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/services" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
                   Услуги
                 </Link>
               </li>
               <li>
-                <Link href="/about/about" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/about/" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
                   За нас
                 </Link>
               </li>
               <li>
-                <Link href="/about/accessories" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/accessories" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
                   Аксесоари
                 </Link>
               </li>
               <li>
-                <Link href="/about/contact" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/contact" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
                   Контакти
                 </Link>
               </li>
