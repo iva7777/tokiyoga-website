@@ -112,7 +112,7 @@ export default function SessionsHero() {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-20">
-          <h1 className="text-6xl md:text-7xl font-bold text-accent mb-6">Избери своята пътека</h1>
+          <h1 className="text-5xl font-bold text-accent mb-6">Избери своята пътека</h1>
           <p className="text-2xl text-primary-foreground/90">Избери луната, презентираща уменията ти в йогата</p>
         </div>
 
@@ -131,7 +131,7 @@ export default function SessionsHero() {
               </div>
 
               {/* Title */}
-              <h3 className="text-3xl font-semibold text-primary-foreground mb-2">
+              <h3 className="text-2xl font-semibold text-primary-foreground mb-2">
                 {session.title}
                 {session.subtitle && (
                   <>

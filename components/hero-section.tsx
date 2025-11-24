@@ -11,7 +11,7 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-2xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
             Поток от енергия,<br />
             пространство за тишина.
           </h1>
@@ -19,7 +19,7 @@ export default function HeroSection() {
           <Link href='sessions'>
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-primary-foreground font-semibold px-8 py-6 text-2xl rounded-full transition-all hover:scale-105 hover:shadow-lg hover:cursor-pointer"
+              className="bg-accent hover:bg-accent/90 text-primary-foreground font-semibold px-8 py-6 text-xl rounded-full transition-all hover:scale-105 hover:shadow-lg hover:cursor-pointer"
             >
               Запиши час
             </Button>

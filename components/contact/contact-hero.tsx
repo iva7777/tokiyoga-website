@@ -7,7 +7,7 @@ export default function ContactHero() {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6 text-accent">Свържете се с нас</h1>
+                    <h1 className="text-5xl font-bold mb-6 text-accent">Свържете се с нас</h1>
                     <p className="text-xl text-primary-foreground/90 leading-relaxed">
                         Имате въпроси или искате да резервирате своята първа сесия? Ние сме тук, за да ви помогнем.
                     </p>

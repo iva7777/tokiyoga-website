@@ -12,7 +12,7 @@ export default function AboutStory() {
                     </div>
 
                     <div className="space-y-6">
-                        <h2 className="text-5xl font-bold text-accent">Нашата история</h2>
+                        <h2 className="text-4xl font-bold text-accent">Нашата история</h2>
                         <div className="space-y-4 text-foreground leading-relaxed text-lg">
                             <p>
                                 Токийога започна своето пътуване през 2025 година с мисията да създаде пространство, в което всеки да може да открие силата на йога практиката и нейното преобразяващо влияние.

@@ -155,7 +155,7 @@ export default function BookingForm() {
       <div className="container mx-auto max-w-2xl">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-accent mb-6">
+          <h1 className="text-5xl font-bold text-accent mb-6">
             {showDatePicker ? "Твоят лунен календар" : `Твоят лунен календар във фаза ${sessionType}`}
           </h1>
           <p className="text-xl text-primary-foreground/90">

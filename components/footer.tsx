@@ -21,25 +21,25 @@ export default function Footer() {
 
           {/* Сесии Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-accent">Сесии</h3>
+            <h3 className="text-xl font-bold mb-4 text-accent">Сесии</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/sessions/book?type=Новолуние" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/sessions/book?type=Новолуние" className="text-primary-foreground/80 hover:text-accent transition-colors text-lg">
                   Новолуние
                 </Link>
               </li>
               <li>
-                <Link href="/sessions/book?type=Първа%20четвърт" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/sessions/book?type=Първа%20четвърт" className="text-primary-foreground/80 hover:text-accent transition-colors text-lg">
                   Първа четвърт
                 </Link>
               </li>
               <li>
-                <Link href="/sessions/book?type=Полулуние" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/sessions/book?type=Полулуние" className="text-primary-foreground/80 hover:text-accent transition-colors text-lg">
                   Полулуние
                 </Link>
               </li>
               <li>
-                <Link href="/sessions/book?type=Пълнолуние" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/sessions/book?type=Пълнолуние" className="text-primary-foreground/80 hover:text-accent transition-colors text-lg">
                   Пълнолуние
                 </Link>
               </li>
@@ -48,25 +48,25 @@ export default function Footer() {
 
           {/* За нас Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-accent">За нас</h3>
+            <h3 className="text-xl font-bold mb-4 text-accent">За нас</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/services" className="text-primary-foreground/80 hover:text-accent transition-colors text-lg">
                   Услуги
                 </Link>
               </li>
               <li>
-                <Link href="/about/" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/about/" className="text-primary-foreground/80 hover:text-accent transition-colors text-lg">
                   За нас
                 </Link>
               </li>
               <li>
-                <Link href="/accessories" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/accessories" className="text-primary-foreground/80 hover:text-accent transition-colors text-lg">
                   Аксесоари
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-primary-foreground/80 hover:text-accent transition-colors text-xl">
+                <Link href="/contact" className="text-primary-foreground/80 hover:text-accent transition-colors text-lg">
                   Контакти
                 </Link>
               </li>
@@ -75,8 +75,8 @@ export default function Footer() {
 
           {/* Newsletter Column */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-accent">Бюлетин</h3>
-            <p className="text-primary-foreground/80 mb-4 text-lg">
+            <h3 className="text-xl font-bold mb-4 text-accent">Бюлетин</h3>
+            <p className="text-primary-foreground/80 mb-4 text-md">
               Въведете своя имейл
             </p>
             <form className="space-y-3">
@@ -87,7 +87,7 @@ export default function Footer() {
               />
               <Button 
                 type="submit"
-                className="w-full bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-primary-foreground transition-all text-xl"
+                className="w-full bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-primary-foreground transition-all text-lg"
               >
                 Абонирай се
               </Button>
@@ -122,7 +122,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-lg text-primary-foreground/60">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-md text-primary-foreground/60">
             <p>Токийога | Всички права запазени</p>
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
               <div className="flex items-center gap-2">

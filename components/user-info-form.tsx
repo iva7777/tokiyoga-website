@@ -49,7 +49,7 @@ export default function UserInfoForm() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Left Column - Form */}
               <div>
-                <h2 className="text-4xl font-bold text-accent mb-8 text-center">
+                <h2 className="text-3xl font-bold text-accent mb-8 text-center">
                   Попълни своите лични данни
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -114,7 +114,7 @@ export default function UserInfoForm() {
 
                   <button
                     type="submit"
-                    className="w-full text-3xl bg-transparent border-2 border-accent text-accent px-12 py-4 rounded-full font-medium hover:bg-accent hover:text-primary hover:shadow-lg hover:shadow-accent/30 hover:scale-105 hover:cursor-pointer transition-all duration-300 mt-6"
+                    className="w-full text-xl bg-transparent border-2 border-accent text-accent px-12 py-4 rounded-full font-medium hover:bg-accent hover:text-primary hover:shadow-lg hover:shadow-accent/30 hover:scale-105 hover:cursor-pointer transition-all duration-300 mt-6"
                   >
                     Изпрати
                   </button>
