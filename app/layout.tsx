@@ -1,5 +1,13 @@
 import type { Metadata } from 'next'
+import { Raleway } from "next/font/google"
 import './globals.css'
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-sans", 
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: 'Токийога',
@@ -25,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="bg">
-      <body className="antialiased" style={{ fontFamily: "var(--font-sans)" }}>
+    <html lang="bg" className={raleway.variable}>
+      <body className="antialiased font-sans">
         {children}
       </body>
     </html>

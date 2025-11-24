@@ -34,7 +34,7 @@
   --radius: 1.5rem;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Phenomena";
   src: url("/fonts/Phenomena-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -56,11 +56,11 @@
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 @theme inline {
-  --font-sans: 'Phenomena', sans-serif;
-  --font-mono: 'Phenomena', monospace;
+  /* --font-sans: 'Phenomena', sans-serif;
+  --font-mono: 'Phenomena', monospace; */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
