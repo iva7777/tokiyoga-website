@@ -1,8 +1,13 @@
-type Product = {
-    id: string | number;
+export type Product = {
+    id: string;
     name: string;
-    image?: string;
     price: number;
-    description?: string;
-    category: string;
+    images: string[];
+    description: string;
+    fullDescription?: string;
+    features?: string[];
+    category?: string;
+    rating?: number;
+    reviews?: number;
+    inStock?: boolean;
 };

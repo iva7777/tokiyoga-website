@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
+import Link from "next/link";
+import { Product } from "@/app/types/product";
 
 type Props = {
     products: Product[];
@@ -23,13 +25,14 @@ export default function AccessoriesGrid({ products, activeCategory }: Props) {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {visibleProducts.map((product) => (
-                        <div
+                        <Link
                             key={product.id}
+                            href={`/accessories/${product.id}`}
                             className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:cursor-pointer transition-all duration-300 hover:scale-105"
                         >
                             <div className="relative overflow-hidden aspect-square bg-muted">
                                 <img
-                                    src={product.image || "/placeholder.svg"}
+                                    src={product.images[0] || "/placeholder.svg"}
                                     alt={product.name}
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
@@ -54,7 +57,7 @@ export default function AccessoriesGrid({ products, activeCategory }: Props) {
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 

@@ -6,6 +6,7 @@ import AccessoriesHero from "@/components/accessories/accessories-hero";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { Suspense, useEffect, useState } from "react";
+import { Product } from "../types/product";
 
 export default function AccessoriesPage() {
     const [products, setProducts] = useState<Product[]>([]);
