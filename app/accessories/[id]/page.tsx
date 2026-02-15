@@ -4,6 +4,7 @@ import { use, useEffect, useState } from "react";
 import { ShoppingCart, Heart, Share2, ChevronLeft, ChevronRight, Star, Check } from "lucide-react";
 import Link from "next/link";
 import { Product } from "@/app/types/product";
+import { convertBgnToEur } from "@/lib/utils";
 
 export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = use(params); 
@@ -121,7 +122,9 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                         </div>
 
                         <div className="py-6 border-y border-accent/20 flex items-center justify-between">
-                            <span className="text-5xl font-bold text-cyan-400">{product.price} лв</span>
+                            <span className="text-5xl font-bold text-cyan-400">
+                                {convertBgnToEur(product.price).toFixed(2)} € / {product.price} лв.
+                            </span>
                             {product.inStock ? (
                                 <div className="flex items-center gap-2 text-cyan-400 font-medium">
                                     <Check className="w-5 h-5" /> В наличност

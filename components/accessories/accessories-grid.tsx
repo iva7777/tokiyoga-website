@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import { Product } from "@/app/types/product";
+import { convertBgnToEur } from "@/lib/utils";
 
 type Props = {
     products: Product[];
@@ -49,7 +50,7 @@ export default function AccessoriesGrid({ products, activeCategory }: Props) {
 
                                 <div className="flex items-center justify-between">
                                     <span className="text-2xl font-bold text-accent">
-                                        {product.price} лв.
+                                        {convertBgnToEur(product.price).toFixed(2)} € / {product.price} лв.
                                     </span>
 
                                     <button className="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center hover:bg-cyan-400 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-accent/50 hover:cursor-pointer">
