@@ -6,6 +6,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: process.env.DOCKER_BUILD === "true" ? "standalone" : undefined,
 }
 
 export default nextConfig
